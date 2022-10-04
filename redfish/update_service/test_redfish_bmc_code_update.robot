@@ -107,7 +107,7 @@ Suite Setup Execution
 
     Valid File Path  IMAGE_FILE_PATH
     Redfish.Login
-    Redfish Delete All BMC Dumps
+    Run Keyword And Ignore Error  Redfish Delete All BMC Dumps
     Redfish Purge Event Log
 
 
