@@ -53,5 +53,4 @@ echo "--variable PLATFORM_ARCH_TYPE:$PLATFORM_ARCH_TYPE" >> $ARG_FILE
 echo "--variable CHASSIS_ID:$CHASSIS_ID" >> $ARG_FILE
 
 # remove empty variables
-cp "${ARG_FILE}" "${ARG_FILE}.old"
-grep -v :$ "${ARG_FILE}.old" > "${ARG_FILE}" 
+sed -ni '/:$/!p' "$ARG_FILE"
