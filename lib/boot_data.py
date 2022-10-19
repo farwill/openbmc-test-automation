@@ -142,7 +142,8 @@ def read_boot_lists(dir_path="data/boot_lists/"):
 
     boot_lists = DotDict()
     for boot_category in boot_file_names:
-        file_path = gm.which(dir_path + boot_category)
+        # file_path = gm.which(dir_path + boot_category)
+        file_path = dir_path + boot_category
         boot_list = gm.file_to_list(file_path, newlines=0, comments=0, trim=1)
         boot_lists[boot_category] = boot_list
 
