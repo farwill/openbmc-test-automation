@@ -5,6 +5,7 @@ Resource        ../../lib/gui_resource.robot
 
 Suite Setup     Suite Setup Execution
 Suite Teardown  Close Browser
+Test Teardown   Test Teardown Execution
 
 
 *** Variables ***
@@ -125,3 +126,8 @@ Suite Setup Execution
     Wait Until Keyword Succeeds  30 sec  5 sec  Location Should Contain  sensors
     # Added delay for sensor page to load completely.
     Sleep  100s
+
+Test Teardown Execution
+    [Documentation]  Do test case teardown tasks.
+
+    Refresh GUI
