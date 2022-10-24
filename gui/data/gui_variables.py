@@ -44,7 +44,7 @@ class gui_variables():
     xpath_reboot_bmc_sub_menu = "//*[@data-test-id='nav-item-reboot-bmc']"
     xpath_host_console_sub_menu = "//*[@data-test-id='nav-item-host-console']"
     xpath_server_power_operations_sub_menu = "//*[@data-test-id='nav-item-server-power-operations']"
-    xpath_host_console_heading = "//h1[text()='Host console']"
+    xpath_host_console_heading = "//h1[text()='Serial over LAN (SOL) console']"
 
     # Settings menu
     xpath_settings_menu = "//*[@data-test-id='nav-button-settings']"
