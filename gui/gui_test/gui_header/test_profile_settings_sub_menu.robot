@@ -93,4 +93,4 @@ Test Setup Execution
 Test Teardown Execution
     [Documentation]  Do test case teardown tasks.
 
-    Click Element  ${xpath_refresh_button}
+    Refresh GUI
