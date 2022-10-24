@@ -11,7 +11,7 @@ Suite Teardown  Close Browser
 
 *** Variables ***
 
-${xpath_progress_logs_heading}   //h1[text()="Progress logs"]
+${xpath_progress_logs_heading}   //h1[text()="POST code logs"]
 ${xpath_search_logs_input}       //*[contains(@id,"searchInput")]
 ${xpath_from_date_input}         //*[@id="input-from-date"]
 ${xpath_to_date_input}           //*[@id="input-to-date"]
