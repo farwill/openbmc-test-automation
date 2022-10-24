@@ -26,7 +26,7 @@ ${xpath_delete_first_row}         //*[@data-test-id="eventLogs-button-deleteRow-
 ${xpath_confirm_delete}           //button[@class="btn btn-primary"]
 ${xpath_event_status_resolved}    //*[@data-test-id="tableFilter-checkbox-Resolved"]
 ${xpath_event_status_unresolved}  //*[@data-test-id="tableFilter-checkbox-Unresolved"]
-${xpath_event_action_download}    //button[contains(text(),"Download")]
+${xpath_event_action_download}    //a[contains(text(),"Export")]
 
 *** Test Cases ***
 
