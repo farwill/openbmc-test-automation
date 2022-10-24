@@ -209,5 +209,5 @@ Set IndicatorLED State
     # Python module:  get_member_list(resource_path)
     ${systems}=  Redfish_Utils.Get Member List  /redfish/v1/Systems
     FOR  ${system}  IN  @{systems}
-        Redfish.Patch  ${system}  body={"IndicatorLED":${led_state}}   valid_status_codes=${expect_resp_code}
+        Redfish.Patch  ${system}  body={"IndicatorLED": "${led_state}"}   valid_status_codes=${expect_resp_code}
     END
