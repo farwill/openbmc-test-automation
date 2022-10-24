@@ -7,6 +7,7 @@ Resource        ../../lib/gui_resource.robot
 Suite Setup     Launch Browser And Login GUI
 Suite Teardown  Close Browser
 Test Setup      Test Setup Execution
+Test Teardown   Test Teardown Execution
 
 
 *** Variables ***
@@ -88,3 +89,8 @@ Test Setup Execution
     Wait Until Page Contains Element  ${xpath_profile_settings}
     Click Element  ${xpath_profile_settings}
     Wait Until Keyword Succeeds  30 sec  10 sec  Location Should Contain  profile-settings
+
+Test Teardown Execution
+    [Documentation]  Do test case teardown tasks.
+
+    Click Element  ${xpath_refresh_button}
