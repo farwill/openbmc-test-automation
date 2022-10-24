@@ -50,8 +50,8 @@ Verify Search Text Entered
     [Tags]  Verify_Search_Text_Entered
 
     Wait Until Page Contains Element  ${xpath_sensors_search}
-    Input Text  ${xpath_sensors_search}  ambi
-    Wait Until Page Contains  Ambient  timeout=120s
+    Input Text  ${xpath_sensors_search}  inl
+    Wait Until Page Contains  INLET  timeout=120s
 
 
 Verify Sensors Filter From Server Health Clickable
