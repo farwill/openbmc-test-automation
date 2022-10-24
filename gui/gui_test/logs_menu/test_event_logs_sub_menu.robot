@@ -101,7 +101,8 @@ Select And Verify Default UTC Timezone For Events
 
     # Set Default timezone in profile settings page.
     Set Timezone In Profile Settings Page  Default
-    Navigate To Event Logs Page
+    # Already click the Logs item in setup
+    # Navigate To Event Logs Page
 
     # Get date and time from backend.
     ${event_data}=  Get Event Logs
