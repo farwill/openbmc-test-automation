@@ -26,7 +26,9 @@ Verify Existence Of All Sections In Firmware Page
     [Documentation]  Verify existence of all sections in firmware page.
     [Tags]  Verify_Existence_Of_All_Sections_In_Firmware_Page
 
-    Page Should Contain  BMC and server
+    Refresh GUI
+    Page Should Contain  BMC
+    Page Should Contain  Host
     Page Should Contain  Update firmware
 
 
