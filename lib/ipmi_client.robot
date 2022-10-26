@@ -184,7 +184,7 @@ Run External IPMI Raw Command
 
 Check If IPMI Tool Exist
     [Documentation]  Check if IPMI Tool installed or not.
-    ${output}=  Execute Command  which ipmitool
+    ${output}=  Execute Command  ipmitool -V
     Should Not Be Empty  ${output}  msg=ipmitool not installed.
 
 
