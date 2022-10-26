@@ -7,3 +7,5 @@
 /tools/argument_file.txt
 /logsdir/
 /logs
+*.log
+*.png
