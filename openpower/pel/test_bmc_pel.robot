@@ -15,7 +15,8 @@ Test Teardown   Run Keywords  Redfish.Logout  AND  FFDC On Test Case Fail
 *** Variables ***
 
 @{mandatory_pel_fileds}   Private Header  User Header  Primary SRC  Extended User Header  Failing MTMS
-
+@{mandatory_Predictive_pel_fileds}   Private Header  User Header  Primary SRC
+...  Extended User Header  Failing MTMS  User Data
 
 *** Test Cases ***
 
@@ -661,6 +662,22 @@ Verify PEL Delete
     Run Keyword and Expect Error  *PEL not found*  Peltool  -i ${id}
 
 
+Verify Mandatory Fields For Predictive Error
+    [Documentation]  Verify mandatory fields of predictive errors from pel information.
+    [Tags]  Verify_Mandatory_Fields_For_Predictive_Error
+
+    # Inject predictive error.
+    BMC Execute Command  ${CMD_PREDICTIVE_ERROR}
+
+    ${pel_ids}=  Get PEL Log Via BMC CLI
+    ${pel_id}=  Get From List  ${pel_ids}  -1
+    ${pel_output}=  Peltool  -i ${pel_id}
+    # Get all fields in predictive error log.
+    ${pel_sections}=  Get Dictionary Keys  ${pel_output}
+
+    List Should Contain Sub List  ${pel_sections}  ${mandatory_Predictive_pel_fileds}
+
+
 *** Keywords ***
 
 Error Logging Rotation Policy
@@ -731,6 +748,7 @@ Create Error Log
     FOR  ${i}  IN RANGE  0  ${count}
         ${cmd}=  Set Variable If
         ...  '${error_severity}' == 'Informational' and '${error_creator}' == 'BMC'  ${CMD_INFORMATIONAL_ERROR}
+        ...  '${error_severity}' == 'Informational' and '${error_creator}' == 'HOST'  ${CMD_INFORMATIONAL_HOST_ERROR}
         ...  '${error_severity}' == 'Predictive' and '${error_creator}' == 'BMC'  ${CMD_PREDICTIVE_ERROR}
         ...  '${error_severity}' == 'Unrecoverable' and '${error_creator}' == 'BMC'  ${CMD_UNRECOVERABLE_ERROR}
         ...  '${error_severity}' == 'Unrecoverable' and '${error_creator}' == 'HOST'  ${CMD_UNRECOVERABLE_HOST_ERROR}
