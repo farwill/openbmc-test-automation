@@ -25,7 +25,7 @@ ${interface}            eth0
 ${ip}                   10.0.12.159
 ${initial_lan_config}   &{EMPTY}
 ${vlan_resource}        ${NETWORK_MANAGER}action/VLAN
-${netmask}              ${16}
+${netmask}              255.255.0.0
 ${gateway}              10.0.254.254
 ${vlan_id_for_rest}     ${30}
 
