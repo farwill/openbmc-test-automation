@@ -22,11 +22,11 @@ Force Tags             IPMI_Network_Config
 ${vlan_id_for_ipmi}     ${10}
 @{vlan_ids}             ${20}  ${30}
 ${interface}            eth0
-${ip}                   10.0.0.1
+${ip}                   10.0.12.159
 ${initial_lan_config}   &{EMPTY}
 ${vlan_resource}        ${NETWORK_MANAGER}action/VLAN
-${netmask}              ${24}
-${gateway}              0.0.0.0
+${netmask}              ${16}
+${gateway}              10.0.254.254
 ${vlan_id_for_rest}     ${30}
 
 
