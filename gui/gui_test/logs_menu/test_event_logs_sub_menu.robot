@@ -4,6 +4,7 @@ Documentation  Test OpenBMC GUI "Event logs" sub-menu of "Logs" menu.
 
 Resource        ../../lib/gui_resource.robot
 Resource        ../../../lib/logging_utils.robot
+Library         ../../../data/pel_variables.py
 
 Suite Setup     Suite Setup Execution
 Suite Teardown  Suite Teardown Execution
@@ -23,7 +24,7 @@ ${xpath_event_action_delete}      //*[@data-test-id="table-button-deleteSelected
 ${xpath_event_action_export}      //*[contains(text(),"Export")]
 ${xpath_event_action_cancel}      //button[contains(text(),"Cancel")]
 ${xpath_delete_first_row}         //*[@data-test-id="eventLogs-button-deleteRow-0"][2]
-${xpath_confirm_delete}           //button[@class="btn btn-primary"]
+${xpath_confirm_delete}           //button[text()="Delete"]
 ${xpath_event_status_resolved}    //*[@data-test-id="tableFilter-checkbox-Resolved"]
 ${xpath_event_status_unresolved}  //*[@data-test-id="tableFilter-checkbox-Unresolved"]
 ${xpath_event_action_download}    //a[contains(text(),"Export")]
