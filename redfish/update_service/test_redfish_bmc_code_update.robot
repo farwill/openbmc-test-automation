@@ -138,7 +138,7 @@ Redfish Update Firmware
     # farwill workaround to ignore bug
     #Wait Until Keyword Succeeds  5 min  10 sec
     #...  Verify Task Progress State  ${task_inv}  ${task_inv_dict['TaskCompleted']}
-    Sleep  10 sec
+    Sleep  600 sec
 
     Run Key  ${post_code_update_actions['BMC image']['${apply_time}']}
     Redfish.Login
