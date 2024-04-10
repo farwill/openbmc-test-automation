@@ -30,7 +30,7 @@ ${CMD_INFORMATIONAL_ERROR}  busctl call xyz.openbmc_project.Logging /xyz/openbmc
 ...  xyz.openbmc_project.Logging.Create Create ssa{ss} xyz.openbmc_project.Common.Error.TestError2
 ...  xyz.openbmc_project.Logging.Entry.Level.Informational 0
 
-${CMD_DEBUG_TRABALL_ERROR}=  /tmp/tarball/bin/logging-test -c AutoTestSimple
+${CMD_DEBUG_TRABALL_ERROR}=  /tmp/tarball/usr/bin/logging-test -c AutoTestSimple
 ${SNMP_TRAP_BMC_INTERNAL_FAILURE}  xyz.openbmc_project.Common.Error.InternalFailure
 ${SNMP_TRAP_BMC_CALLOUT_ERROR}  xyz.openbmc_project.Common.Error.Timeout
 ${SNMP_TRAP_BMC_INFORMATIONAL_ERROR}  xyz.openbmc_project.Common.Error.TestError2

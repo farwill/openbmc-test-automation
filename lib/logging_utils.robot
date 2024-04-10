@@ -148,7 +148,7 @@ Verify Watchdog Errorlog Content
 Logging Test Binary Exist
     [Documentation]  Verify existence of prerequisite logging-test.
     ${stdout}  ${stderr}  ${rc}=
-    ...  BMC Execute Command  test -f /tmp/tarball/bin/logging-test  print_out=1
+    ...  BMC Execute Command  test -f /tmp/tarball/usr/bin/logging-test  print_out=1
     Should Be Empty  ${stderr}  msg=Logging Test stderr is non-empty.
 
 
@@ -208,7 +208,7 @@ Create Test Error Log
     #     "Timestamp": 1487743963328,
     #     "Associations": []
     # }
-    BMC Execute Command  /tmp/tarball/bin/logging-test -c AutoTestSimple
+    BMC Execute Command  /tmp/tarball/usr/bin/logging-test -c AutoTestSimple
 
 Count Error Entries
     [Documentation]  Count Error entries.

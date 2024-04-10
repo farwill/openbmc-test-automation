@@ -371,7 +371,7 @@ Verify Event Logs Capping
 
     Redfish Purge Event Log
 
-    ${cmd}=  Catenate  uptime; for i in {1..201}; do /tmp/tarball/bin/logging-test -c
+    ${cmd}=  Catenate  uptime; for i in {1..201}; do /tmp/tarball/usr/bin/logging-test -c
     ...  AutoTestSimple;sleep 1;done; uptime
     BMC Execute Command  ${cmd}
 
@@ -392,7 +392,7 @@ Test Event Log Wrapping
     Sleep  10s  reason=Wait for logging service to restart properly.
 
     # Create ${max_num_event_logs} event logs.
-    ${cmd}=  Catenate  uptime; for i in {1..${max_num_event_logs}}; do /tmp/tarball/bin/logging-test -c
+    ${cmd}=  Catenate  uptime; for i in {1..${max_num_event_logs}}; do /tmp/tarball/usr/bin/logging-test -c
     ...  AutoTestSimple;sleep 1;done; uptime
     BMC Execute Command  ${cmd}
 

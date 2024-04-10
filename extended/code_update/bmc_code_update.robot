@@ -52,7 +52,7 @@ Prepare Persistent Data
     Install Debug Tarball On BMC  tarball_file_path=${DEBUG_TARBALL_PATH}
 
     # Create a dummy error log and dump.
-    BMC Execute Command  /tmp/tarball/bin/logging-test -c ${test_errlog_text}
+    BMC Execute Command  /tmp/tarball/usr/bin/logging-test -c ${test_errlog_text}
     ${dump_id}=  Create User Initiated Dump
     Check Dump Existence  ${dump_id}
     Set Suite Variable  ${dump_id}
