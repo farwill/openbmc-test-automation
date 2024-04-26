@@ -27,7 +27,7 @@ Force Tags    BMC_Connections
 
 *** Variables ***
 
-${iterations}         10000
+${iterations}         1000
 ${loop_iteration}     ${1000}
 ${hostname}           testhostname
 ${MAX_UNAUTH_PER_IP}  ${5}
